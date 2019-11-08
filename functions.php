@@ -6,4 +6,12 @@ function localuniv_files(){
     wp_enqueue_style('localuniv_main_styles', get_stylesheet_uri(), NULL, microtime());
 }
 add_action('wp_enqueue_scripts', 'localuniv_files');
-?>
+
+
+
+function university_features(){
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'university_features');
+
